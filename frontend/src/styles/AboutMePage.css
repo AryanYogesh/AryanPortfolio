@@ -1,0 +1,179 @@
+.about-me{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    color: #fff;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+.intro{
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, #ff007f, #ff6600);
+    border-radius: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro h1{
+    font-size: 2rem;
+    color: #fffd66;
+}
+
+.intro p{
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.education{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.education .college, .education .pu-college, .education .school{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.education img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.education img:hover{
+    transform: scale(1.1);
+}
+
+.education h3{
+    font-size: 2rem;
+    color: #ff007f;
+    margin-bottom: 10px;
+}
+
+.education p{
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.interests{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.interests h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff6600;
+}
+
+.interests-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 20px; /* Space between the items */
+    justify-items: center; /* Center the items in their grid cells */
+    margin: 0 auto; /* Center the grid container */
+    width: 100%;
+}
+
+.interest {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    width: 200px; /* Fixed width for each interest item */
+    text-align: center;
+}
+
+.interest img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.interest p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.interest:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .interests-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+
+    .interest {
+        width: 80%;  /* Take more width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .interests-items {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .interest {
+        width: 100%;  /* Full width for very small screens */
+    }
+}
+
+
+.resume{
+    margin-top: 80px;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff007f, #ff6600);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.resume h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.resume-button {
+    padding: 15px 30px;
+    background-color: #00ffcc;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #00b3b3;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .interests-items {
+        flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+        justify-content: center; /* Center the items */
+    }
+
+    .interest {
+        width: 45%;  /* Adjust width for smaller screens */
+    }
+}

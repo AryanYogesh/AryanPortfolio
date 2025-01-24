@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap');
+
+.name {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: transparent;
+    background: linear-gradient(135deg, #0ba3a6, #234ac9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 
+    0 0 2px rgba(255, 255, 255, 0.3), 
+    0 0 4px rgba(222, 9, 9, 0.2), 
+    0 0 8px rgba(88, 59, 59, 0.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.name:hover{
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.navbar{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.8));;
+    padding: 1.5rem 2.5rem;
+    border-bottom:  3px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1); 
+}
+
+.navbar .nav-link{
+    color: #e0e0e0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease padding-left 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+}
+
+
+.navbar .nav-link::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00dbde;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #00dbde;
+}
+
+.navbar .nav-link:hover::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar-toggler {
+    border-color: #00dbde;
+}
+
+.navbar-toggler-icon {
+    background-color: #00dbde;
+}
+
+.navbar .ms-auto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.navbar .nav-link.active {
+    color: #00dbde;
+    font-weight: 700;
+}

@@ -1,0 +1,196 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e1e2f, #323247);
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .projects-container {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .projects-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #6f86d6, #48c6ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+  }
+  
+  /* Circular Layout */
+  .circular-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: rotate 12s linear infinite;
+  }
+  
+  .project-node {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #48c6ef, #6f86d6);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Node Hover Animation */
+  .project-node:hover {
+    transform: scale(1.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #6f86d6, #48c6ef);
+  }
+  
+  /* Circular Node Positioning */
+  .project-node:nth-child(1) {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+  }
+  .project-node:nth-child(2) {
+    top: 50%;
+    left: 90%;
+    transform: translate(-90%, -50%);
+  }
+  .project-node:nth-child(3) {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+  }
+  .project-node:nth-child(4) {
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: linear-gradient(135deg, #48c6ef, #6f86d6);
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+  }
+  
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .modal-content ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+    padding-left: 15px;
+    position: relative;
+  }
+  
+  .modal-content ul li::before {
+    content: "✓";
+    color: #6f86d6;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Modal Buttons */
+  .modal-buttons a {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #6f86d6, #48c6ef);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .modal-buttons a:hover {
+    background: linear-gradient(135deg, #48c6ef, #6f86d6);
+    transform: scale(1.05);
+  }
+  
+  .close-button {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background: #fff;
+    color: #6f86d6;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
